@@ -5,7 +5,7 @@ def index():
     return render_template('form.html')
 @app.route('/submit',methods=['POST'])
 def submit():
-    username=request.form.get('username')
+    username=request.form.get('user')
     email=request.form.get('email')
     year=request.form.get('year')
     return render_template('results.html',name=username,email=email,year=year)
